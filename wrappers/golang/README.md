@@ -1,45 +1,48 @@
-## Indy SDK for Go
+# Indy SDK for Go
 
 This is a **work-in-progress** Go wrapper for [Indy](https://www.hyperledger.org/projects/indy). It is implemented using cgo to interact with native libindy library written in Rust.
 Hyperledger Indy is the open-source codebase behind the Sovrin network for self-sovereign digital identity.
 
 This Go wrapper is developed using golang 1.7+.
 
-### How to install
+## How to install
 
 You will need:
 
 * C build tools
-    * gcc, build-essentials
+  * gcc, build-essentials
 * `libindy` v1.6+ in your system library path. (i.e. `/usr/lib/libindy.so` for linux)
 
 ```sh
-    go get github.com/hyperledger/indy-sdk/wrappers/golang/indysdk
+    go get -v github.com/hyperledger/indy-sdk/wrappers/golang/indysdk
 ```
 
-### Testing
+## Testing
 
-- You will need:
-    * Dep [GoDep](https://golang.github.io/dep/) for dependency management
+* You will need:
+  * Dep [GoDep](https://golang.github.io/dep/) for dependency management
 
-- Clone indy-sdk repo from https://github.com/hyperledger/indy-sdk
+* Clone indy-sdk repo from https://github.com/hyperledger/indy-sdk
 
-- Move to golang/indysdk directory
+* Move to golang/indysdk directory
+
 ```sh
     cd wrappers/golang/indysdk
 ```
 
-- Install dependencies
+* Install dependencies
+
 ```sh
     dep ensure
 ```
 
-- Run test:
+* Run test:
+
 ```sh
     go test -v
 ```
 
-### Usage
+## Usage
 
 ```go
 package main
@@ -64,5 +67,6 @@ func main() {
 }
 ```
 
-#### Troubleshooting
+### Troubleshooting
+
 Use environment variable `RUST_LOG={info|debug|trace}` to output logs of Libindy.
